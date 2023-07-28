@@ -8,6 +8,11 @@ const { getSettings } = require("@schemas/Guild");
  */
 module.exports = async (client, message) => {
   if (!message.guild || message.author.bot) return;
+  if (message.channelId == 40006486959){
+    await message.react('❤️')
+    await message.react('🥰')
+    await message.react('💕')
+  }
   const settings = await getSettings(message.guild);
 
   // command handler
