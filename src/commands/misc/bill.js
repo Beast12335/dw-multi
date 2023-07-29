@@ -1,3 +1,42 @@
+module.exports = {
+  name: "bill",
+  description: "creates bill for user",
+  category: "MISC",
+  command: {
+    enabled: false,
+  },
+  slashCommand: {
+    enabled: true,
+    ephemeral: false,
+    options: [{
+      name:`user`, 
+      description:`choose the customer`,
+      required:true,
+      type:User},
+      {
+      name : `order`,
+      description:`Items ordered`,
+      required:true},
+              {
+      name : `cost`,
+      description:` Price of Item`,
+      required:true},
+              {
+      name:`currency`,
+      description:`Choose the currency`,
+      required:true,
+      choices:[{
+        name:`dollar`,value:`dollar`},
+               {name:`euro`,value:`euro`},
+               {name:`inr`,value:`inr`},
+               {name:`myr`,value:`myr`}]},
+              {name:`discount`,
+               description:`enter the discount`,
+               required:true},
+              {name:`price`,
+               required:true,
+               description:`final price after discount`}],
+  },
 const {registerFont, createCanvas, loadImage} = require('canvas');
 const comicsans = require('@canvas-fonts/tahoma');
 registerFont(comicsans, {family: 'Tahoma'});
@@ -39,7 +78,7 @@ else { ctx.fillText(t,240,320) }
 if (cr == 'dollar') {
   var curr = ''
   var currency = '$'}
-else if (cr == 'eur') {
+else if (cr == 'euro') {
   var curr = ''
   var currency = '€'}
 else if (cr == 'inr') {
