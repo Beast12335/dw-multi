@@ -35,9 +35,9 @@ module.exports = {
   },*/
 
   async interactionRun(interaction) {
-    let order = interaction.getStringOption('order')
-    let cost = interaction.getStringOption('cost')
-    let user = interaction.getStringOption('user')
+    let order = interaction.options.getString('order')
+    let cost = interaction.options.getString('cost')
+    let user = interaction.options.getString('user')
     if (user == 'Prithvi'){
       var link = 'https://www.paypal.me/prithvirajghorpade'
       var p = '8806661777'}
