@@ -43,5 +43,6 @@ process.on("unhandledRejection", (err) => client.logger.error(`Unhandled excepti
   }
 
   // start the client
+  client.user.setAvatar('https://cdn.discordapp.com/icons/808758266792247297/3c7a14d0f10d9bd3be4921bf0e6be5ca.png')
   await client.login(process.env.BOT_TOKEN);
 })();
