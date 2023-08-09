@@ -8,7 +8,7 @@ const { getSettings } = require("@schemas/Guild");
  */
 module.exports = async (client, message) => {
   if (!message.guild || message.author.bot) return;
-  if (message.channelId == 40006486959){
+  if (message.channelId == '914051169133948948'){
     await message.react('❤️')
     await message.react('🥰')
     await message.react('💕')
